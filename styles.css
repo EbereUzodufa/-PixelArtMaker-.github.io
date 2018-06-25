@@ -38,3 +38,33 @@ td {
 input[type=number] {
     width: 6em;
 }
+
+#Andela{
+    color: #3359df;     
+}
+
+#Udacity{
+    color: #02b3e4;
+}
+
+#GoogleGreen{
+    color: #3cba54;
+}
+
+#GoogleBlue{
+    color: #4885ed;
+}
+
+#GoogleRed{
+    color: #db3236;
+}
+
+#GoogleYellow{
+    color: #f4c20d;
+}
+#bembem{
+    color: #7ac673;
+}
+#powered{
+    font-size: 120%;
+}

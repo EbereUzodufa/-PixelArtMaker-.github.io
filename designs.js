@@ -11,13 +11,16 @@ $('#inputButton').on('click',function makeGrid() {
 	const table = $('#pixelCanvas');
 	table.children().remove();
 
-	for(i=1; i<=tableHeight; i++){
+	var i = 1;
+
+	while(i<=tableHeight){
 		table.prepend('<tr></tr>');
-		//alert('Hi, '+ tableHeight + ';'+ tableWidth);	
 
 		for(j=1; j<=tableWidth; j++){
 			$('tr').first().prepend('<td></td>');
 		}
+
+		i++;
 	}
 
 	$('#inputHeight').text(tableHeight)
@@ -28,21 +31,8 @@ $('#inputButton').on('click',function makeGrid() {
 
 	$("td").on('click', function(event) {
 		event.preventDefault();
-		//alert("Cell");
-		//$(this).css("background-color",$('#colorPicker').val());
-		//alert( $(this).css("background-color"));
 
 		var cox = $(this).css("background-color");
-		//alert(cox);
-		//alert(cox);
-		// if ($(this).css("background-color")!=($('#colorPicker').val())) {
-		// 	$(this).css("background-color",$('#colorPicker').val());
-		// 	//alert("aSome");
-		// }
-		// else{
-		// 	$(this).css("background-color",'transparent');
-		// 	//alert("aSomeA");
-		// }
 
 		function codeHex(hexa){
 			if (hexa==10) {
@@ -162,16 +152,4 @@ $('#inputButton').on('click',function makeGrid() {
 		}
 	});
 
-	// $('#try').on('click', function(event) {
-	// 	event.preventDefault();
-	// 	 Act on the event 
-	// 	var cox = $('#colorPicker').val();
-	// 	alert(cox);
-	// });
-
-	// $("#colorPicker").on('click', function(event) {
-	// 	event.preventDefault();
-	// 	/* Act on the event */
-	// 	alert($('#colorPicker').val());
-	// });
 });
